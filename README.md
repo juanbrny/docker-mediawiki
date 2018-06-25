@@ -87,8 +87,8 @@ Start MediaWiki container.
 ```
 docker run --name mediawiki_wiki \
 --link mediawiki_mysql:mediawiki_mysql \
--p 8080:8080 \
--e MEDIAWIKI_SERVER=http://localhost:8080 \
+-p 8087:8087 \
+-e MEDIAWIKI_SERVER=http://localhost:8087 \
 -e MEDIAWIKI_SITENAME=MyWiki \
 -e MEDIAWIKI_LANGUAGE_CODE=en \
 -e MEDIAWIKI_DB_TYPE=mysql \
@@ -126,7 +126,7 @@ If you are using an existing database find the variable `$wgDBTableOptions` in y
 -e MEDIAWIKI_DB_TABLE_OPTIONS=ENGINE=InnoDB, DEFAULT CHARSET=binary
 ```
 
-You should be able to browse your wiki at [http://localhost:8080](http://localhost:8080).
+You should be able to browse your wiki at [http://localhost:8087](http://localhost:8087).
 
 
 ### With SQLite
@@ -137,8 +137,8 @@ Start MediaWiki container.
 
 ```
 docker run --name=mediawiki_wiki \
--p 8080:8080 \
--e MEDIAWIKI_SERVER=http://localhost:8080 \
+-p 8087:8087 \
+-e MEDIAWIKI_SERVER=http://localhost:8087 \
 -e MEDIAWIKI_SITENAME=MyWiki \
 -e MEDIAWIKI_LANGUAGE_CODE=en \
 -e MEDIAWIKI_DB_TYPE=sqlite \
@@ -167,7 +167,7 @@ Copy the secret key that the install script dumps or find the variable `$wgSecre
 -e MEDIAWIKI_SECRET_KEY=secretkey
 ```
 
-You should be able to browse your wiki at [http://localhost:8080](http://localhost:8080).
+You should be able to browse your wiki at [http://localhost:8087](http://localhost:8087).
 
 
 ## Configuration

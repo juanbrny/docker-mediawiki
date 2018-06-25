@@ -7,7 +7,7 @@ services:
     image: kristophjunge/mediawiki
     container_name: mediawiki_wiki
     environment:
-      MEDIAWIKI_SERVER: http://localhost:8080
+      MEDIAWIKI_SERVER: http://localhost:8087
       MEDIAWIKI_SITENAME: MyWiki
       MEDIAWIKI_LANGUAGE_CODE: en
       MEDIAWIKI_SECRET_KEY: mysecret
@@ -18,7 +18,7 @@ services:
       MEDIAWIKI_DEFAULT_SKIN: vector
       MEDIAWIKI_DEBUG: 1
     ports:
-    - 8080:8080
+    - 8087:8087
     volumes:
     - mediawiki_images:/images
     - mediawiki_data:/data

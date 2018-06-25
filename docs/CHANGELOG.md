@@ -7,7 +7,7 @@
 
 * Updated to MediaWiki 1.30.0.
 * BREAKING: HTTPS is not longer supported by the container. HTTPS setups should be done using proxy containers. The environment variable `MEDIAWIKI_HTTPS` was removed.
-* BREAKING: The port exposed by the container is now 8080 instead of 80 for compatibility with environments where lower ports are in use or not allowed.
+* BREAKING: The port exposed by the container is now 8087 instead of 80 for compatibility with environments where lower ports are in use or not allowed.
 * Updated to docker-compose version 3.
 * BREAKING: Removed deprecated environment variable `MEDIAWIKI_ENABLE_VISUAL_EDITOR`. Please use `MEDIAWIKI_EXTENSION_VISUAL_EDITOR_ENABLED`.
 * Removed build arguments `MEDIAWIKI_USER_UID`, `MEDIAWIKI_USER_GID`. 
@@ -40,7 +40,7 @@
 * Updated to MediaWiki 1.29.0.
 * Switched downloads to CURL instead of Docker `ADD` since it now extracts downloaded archives.
 * Added container_name property to docker-compose example files.
-* Switched docker-compose example port from 8080 to 80.
+* Switched docker-compose example port from 8087 to 80.
 * Removed known issue that VisualEditor is not working with SQLite.
 
 ## 2017-06-17 1.28.2-1
