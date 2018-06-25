@@ -112,6 +112,6 @@ COPY script/* /script/
 
 # General setup
 VOLUME ["/var/cache/nginx", "/data", "/images"]
-EXPOSE 8080
+EXPOSE 8087
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD []
